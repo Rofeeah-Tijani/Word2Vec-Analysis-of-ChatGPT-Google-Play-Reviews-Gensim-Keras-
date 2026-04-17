@@ -80,7 +80,7 @@ Gensim was used for fast and efficient training of Word2Vec models.
 ### Example Code:
 ```python
 from gensim.models import Word2Vec
-
+````
 model = Word2Vec(
     sentences=tokenized_reviews,
     vector_size=100,
