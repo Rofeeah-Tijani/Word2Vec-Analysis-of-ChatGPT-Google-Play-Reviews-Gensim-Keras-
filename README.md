@@ -93,46 +93,49 @@ model = Word2Vec(
 
 model_sg.wv.most_similar("helpful")
 
-[('ever', 0.34927210211753845),
- ('information', 0.30428245663642883),
- ('helps', 0.24869845807552338),
- ('truly', 0.22213731706142426),
- ('it', 0.17786230146884918),
- ('much', 0.16429536044597626),
- ('incredibly', 0.1622212529182434),
- ('life', 0.15478304028511047),
- ('satisfying', 0.15243974328041077),
- ('ChatGPT', 0.1465940922498703)]
+| Word        | Similarity Score |
+| ----------- | ---------------- |
+| ever        | 0.3493           |
+| information | 0.3043           |
+| helps       | 0.2487           |
+| truly       | 0.2221           |
+| it          | 0.1779           |
+| much        | 0.1643           |
+| incredibly  | 0.1622           |
+| life        | 0.1548           |
+| satisfying  | 0.1524           |
+| ChatGPT     | 0.1466           |
 
------
 
-model_sg.wv.most_similar("disappointing")
-[('incredibly', 0.21634380519390106),
- ('Good', 0.1923927366733551),
- ('but', 0.15619224309921265),
- ('tool', 0.14874930679798126),
- ('content', 0.13846418261528015),
- ('filter', 0.11906077712774277),
- ('so', 0.11571768671274185),
- ('navigate', 0.11202113330364227),
- ('gives', 0.10229195654392242),
- ('very', 0.09822879731655121)]
+model.wv.most_similar("disappointing")
 
-------
+| Word       | Similarity Score |
+| ---------- | ---------------- |
+| incredibly | 0.2163           |
+| Good       | 0.1924           |
+| but        | 0.1562           |
+| tool       | 0.1487           |
+| content    | 0.1385           |
+| filter     | 0.1191           |
+| so         | 0.1157           |
+| navigate   | 0.1120           |
+| gives      | 0.1023           |
+| very       | 0.0982           |
 
-model_sg.wv.most_similar(positive=["excellent", "helpful"], negative=["disappointing"])
+model.wv.most_similar(positive=["excellent", "helpful"], negative=["disappointing"])
 
-[('in', 0.24929507076740265),
- ('life', 0.2099267989397049),
- ('ever', 0.19838929176330566),
- ('one', 0.1976073533296585),
- ('truly', 0.19432534277439117),
- ('satisfying', 0.19138804078102112),
- ('deep', 0.18408972024917603),
- ('too', 0.1661464124917984),
- ('Best', 0.16613303124904633),
- ('unmatched', 0.1549810916185379)]
-
+| Word       | Similarity Score |
+| ---------- | ---------------- |
+| in         | 0.2493           |
+| life       | 0.2099           |
+| ever       | 0.1984           |
+| one        | 0.1976           |
+| truly      | 0.1943           |
+| satisfying | 0.1914           |
+| deep       | 0.1841           |
+| too        | 0.1661           |
+| Best       | 0.1661           |
+| unmatched  | 0.1550           |
 
 -----
 
