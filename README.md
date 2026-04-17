@@ -133,6 +133,8 @@ model_sg.wv.most_similar(positive=["excellent", "helpful"], negative=["disappoin
  ('Best', 0.16613303124904633),
  ('unmatched', 0.1549810916185379)]
 
+-----
+
 2️⃣ Keras Word2Vec (From Scratch Implementation)
 
 A custom Word2Vec model was built using Keras to understand the internal mechanism of embedding learning.
